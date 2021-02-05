@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://aresfor.github.io</id>
     <title>ロキシー</title>
-    <updated>2021-02-05T13:24:23.792Z</updated>
+    <updated>2021-02-05T13:30:19.912Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://aresfor.github.io"/>
     <link rel="self" href="https://aresfor.github.io/atom.xml"/>
@@ -10,6 +10,78 @@
     <logo>https://aresfor.github.io/images/avatar.png</logo>
     <icon>https://aresfor.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, ロキシー</rights>
+    <entry>
+        <title type="html"><![CDATA[Blender备忘快捷键]]></title>
+        <id>https://aresfor.github.io/post/blender-bei-wang-kuai-jie-jian/</id>
+        <link href="https://aresfor.github.io/post/blender-bei-wang-kuai-jie-jian/">
+        </link>
+        <updated>2021-02-05T13:28:07.000Z</updated>
+        <content type="html"><![CDATA[<p>Shift+A是添加，Shift+D是复制，G是移动，R是旋转，Delete是删除<br>
+F3查询栏 空格渲染动画<br>
+S = scale G = translate R = rotation<br>
+以上三个可以配合X,Y,Z使用，按shift+z 是可以去除z轴的变化<br>
+table进入编辑模式<br>
+编辑模式shift复选 alt选中一圈边<br>
+o进入等比例编辑模式，同时鼠标中建可以改变缩放范围<br>
+像这类模式屏幕中间上面选</p>
+<p>还有C，B（中建取消选择）多选<br>
+同时双面选 在右上角，Z是快捷键<br>
+平视和透视的变换？<br>
+shift+z切换渲染视图（网格）<br>
+z可以选择视图的各种模式<br>
+f12打开后的渲染窗口<br>
+H隐藏，alt+h显示隐藏<br>
+shift+f3 节点编辑模式 shift+f5 返回3D视图这些模式改变在左上角可以改<br>
+ctrl+r加紫线，建模用<br>
+m移动一个层的物体到另一个层<br>
+选中一圈点 i插入一个面，做马克杯顶可用<br>
+选择四个点or？ 按f增加面 删除面的时候要选face<br>
+e拉伸模式<br>
+重新计算recalculate shift+N<br>
+物品scale完的时候ctrl+a apply scale 选择应用比例，不然粒子等效果会被改变<br>
+对物体右键 shading smooth<br>
+jonathan williamson 擅长建模<br>
+blender cookie or cg cookie blender</p>
+<p>shift+s cursor to select 让3d光标吸附物体<br>
+选中物体的边 按ctrl+E 选择mark seam 标记缝，uv展开用<br>
+选中物体  打开uvimage edit  u-》unwrap 让材质上去<br>
+ctrl+shift+n 删除法线 ，在加了固化modifier里面选only rim就可以得到正确的方向<br>
+或者老方法 法线唤出在右上角show overlay那里<br>
+教程里左边工具栏就是2.8左上角view select add mesh 那些<br>
+mesh-》normal-》flip翻转面的方向 或者alt+n-》flip 还要在固化modif改offset为-1<br>
+选中物体 ctrl+L 可以复制相关信息 包括材质<br>
+刷权重模式 ctrl+tab<br>
+ctrl+j 合并物体，但要apply 相应的modifier来让它应用到合并起来的物体上</p>
+<p>锥形灯光 use？cone可以让光与其他物体发生交互，光的size用来调节阴影的柔和程度，越高越柔和</p>
+<p>blender guru pro lighting插件<br>
+渲染室内采样率要升高<br>
+渲染要注意的：1、渲染分辨率选择，resolution<br>
+2、采样率3、渲染方格大小4、“萤火虫”减少可以关闭两个reflection选项<br>
+（render——》lightpath内？），但会减少场景光照<br>
+color-》huesaturation降低色相饱和度<br>
+object面板中可以将物体从组里去掉<br>
+focal length 是焦距，就是摄像机放大差不多。。<br>
+focus可以选择对焦的物体<br>
+点开limits，改动distance就是改变焦点<br>
+aperture景深</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[VSFTPD配置]]></title>
+        <id>https://aresfor.github.io/post/vsftpd-pei-zhi/</id>
+        <link href="https://aresfor.github.io/post/vsftpd-pei-zhi/">
+        </link>
+        <updated>2021-02-05T13:26:54.000Z</updated>
+        <content type="html"><![CDATA[<p>根据这篇博客进行搭建vsftpd</p>
+<p>遇到的问题解决<br>
+vsftpd.ftpusers：位于/etc/vsftpd目录下。它指定了哪些用户账户不能访问FTP服务器，例如root等。<br>
+vsftpd.user_list：位于/etc/vsftpd目录下。该文件里的用户账户在默认情况下也不能访问FTP服务器，仅当vsftpd .conf配置文件里启用userlist_enable=NO选项时才允许访问。<br>
+vsftpd.conf：位于/etc/vsftpd目录下。来自定义用户登录控制、用户权限控制、超时设置、服务器功能选项、服务器性能选项、服务器响应消息等FTP服务器的配置。</p>
+<p>同时配置文件中vsftpd.conf配置中的一行chroot_list中间存储ftp的用户，不然会拒绝登录，一定要有对应的用户才行</p>
+<p>修改了vsftpd.conf文件记得要重新启动vsftpd<br>
+systemctl restart vsftpd.service;</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[LAMP环境搭建]]></title>
         <id>https://aresfor.github.io/post/lamp-huan-jing-da-jian/</id>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>Gridea | ロキシー</title>
+<title>VSFTPD配置 | ロキシー</title>
 <meta name="description" content="可不可以">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -23,6 +23,7 @@
 
   </head>
   <body>
+  
     <nav class="navbar border fixed split-nav">
   <div class="nav-brand">
     <h3><a href="https://aresfor.github.io">ロキシー</a></h3>
@@ -79,42 +80,45 @@
     <div id="top" class="row site">
       <div class="sm-12 md-8 col">
         <div class="paper">
-          <h2 class="current-tag">标签: Gridea</h2>
-          
-  <article class="article">
-    <h2 class="article-title">
-      <a href="https://aresfor.github.io/post/hello-gridea/">Hello Gridea</a>
-    </h2>
-    <p class="article-meta">
-      2018-12-12
-      
-        <a href="https://aresfor.github.io/tag/rUjeykgwo/" class="badge secondary">
-          Gridea
-        </a>
-      
-    </p>
-    <p class="text-lead">
-      <p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+          <article class="article">
+            <h1>VSFTPD配置</h1>
+            <p class="article-meta">
+              2021-02-05
+              
+            </p>
+            
+              <img src="https://aresfor.github.io/post-images/vsftpd-pei-zhi.jpg" alt="VSFTPD配置">
+            
+            <div class="post-content">
+              <p>根据这篇博客进行搭建vsftpd</p>
+<p>遇到的问题解决<br>
+vsftpd.ftpusers：位于/etc/vsftpd目录下。它指定了哪些用户账户不能访问FTP服务器，例如root等。<br>
+vsftpd.user_list：位于/etc/vsftpd目录下。该文件里的用户账户在默认情况下也不能访问FTP服务器，仅当vsftpd .conf配置文件里启用userlist_enable=NO选项时才允许访问。<br>
+vsftpd.conf：位于/etc/vsftpd目录下。来自定义用户登录控制、用户权限控制、超时设置、服务器功能选项、服务器性能选项、服务器响应消息等FTP服务器的配置。</p>
+<p>同时配置文件中vsftpd.conf配置中的一行chroot_list中间存储ftp的用户，不然会拒绝登录，一定要有对应的用户才行</p>
+<p>修改了vsftpd.conf文件记得要重新启动vsftpd<br>
+systemctl restart vsftpd.service;</p>
 
-    </p>
-    <div class="row">
-      <a href="https://aresfor.github.io/post/hello-gridea/" class="readmore-link">
-        <button>
-          Read More
-        </button>
-      </a>
-    </div>
-  </article>
-
-
+            </div>
+          </article>
         </div>
-        <div class="row flex-edges">
-  
-  
-</div>
-
+        <div class="paper" data-aos="fade-in">
+          
+            <div class="next-post">
+              <div class="next">
+                下一篇
+              </div>
+              <a href="https://aresfor.github.io/post/lamp-huan-jing-da-jian/">
+                <h3 class="post-title">
+                  LAMP环境搭建
+                </h3>
+              </a>
+            </div>
+          
+        </div>
+        
       </div>
+
       <div class="sm-12 md-4 col sidebar">
   <div class="paper info-container">
     <img src="https://aresfor.github.io/images/avatar.png?v=1612531813511" class="no-responsive avatar">
@@ -179,11 +183,11 @@
     </div>
     <div class="row">
       
-        <a href="https://aresfor.github.io/tag/gTNZmcoKy/" class="badge warning">
+        <a href="https://aresfor.github.io/tag/gTNZmcoKy/" class="badge secondary">
           linux
         </a>
       
-        <a href="https://aresfor.github.io/tag/CVdkQjYxNH/" class="badge warning">
+        <a href="https://aresfor.github.io/tag/CVdkQjYxNH/" class="badge secondary">
           web
         </a>
       
@@ -193,6 +197,7 @@
     呐呐呐呐呐呐呐呐呐呐呐 | <a class="rss" href="https://aresfor.github.io/atom.xml" target="_blank">RSS</a>
   </div>
 </div>
+
 
     </div>
 

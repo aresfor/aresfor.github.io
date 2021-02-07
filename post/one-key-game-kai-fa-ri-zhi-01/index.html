@@ -5,7 +5,7 @@
     
 <meta charset="utf-8" >
 
-<title>LAMP环境搭建 | ロキシー</title>
+<title>one key game开发日志01 | ロキシー</title>
 <meta name="description" content="可不可以">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -80,60 +80,33 @@
       <div class="content-container">
         <div class="post-detail">
           
-            <div class="feature-container" style="background-image: url('https://aresfor.github.io/post-images/lamp-huan-jing-da-jian.jpg')">
+            <div class="feature-container" style="background-image: url('https://aresfor.github.io/post-images/one-key-game-kai-fa-ri-zhi-01.png')">
             </div>
           
-          <h2 class="post-title">LAMP环境搭建</h2>
+          <h2 class="post-title">one key game开发日志01</h2>
           <div class="post-info post-detail-info">
-            <span><i class="icon-calendar-outline"></i> 2021-02-05</span>
-            
-              <span>
-                <i class="icon-pricetags-outline"></i>
-                
-                  <a href="https://aresfor.github.io/tag/gTNZmcoKy/">
-                    linux
-                    
-                      ，
-                    
-                  </a>
-                
-                  <a href="https://aresfor.github.io/tag/CVdkQjYxNH/">
-                    web
-                    
-                  </a>
-                
-              </span>
+            <span><i class="icon-calendar-outline"></i> 2021-02-07</span>
             
           </div>
           <div class="post-content">
-            <p>按照https://blog.csdn.net/u013904227/article/details/51057511这篇博客进行配置</p>
-<p>以下对出现的一些问题进行解释<br>
-默认apache的页面根目录为/var/www/html<br>
-默认apache配置文件为/etc/httpd/conf/httpd.conf<br>
-其中DirectoryIndex为默认主页，就是输入ip直接进入的页面<br>
-可以在命令模式下按“/”来搜索，n来搜索下一个<br>
-mysql_secure_installation 这条命令第一次进入mysql数据库会要你输入命令，<br>
-直接按“回车键”就可以进入并设置密码</p>
-<p>一些命令：<br>
-cp -a为保留原文件属性的前提下复制文件<br>
-rm -rf删除文件夹</p>
-<p>phpMyAdmin 403 forbidden解决</p>
-<p>Require ip 127.0.0.1</p>
-<p>替换为您的工作站IP地址：<br>
-Require ip 10.1.3.53</p>
-<p>再次找到以下行：<br>
-Allow from 127.0.0.1</p>
-<p>替换为：<br>
-Allow from 10.1.3.53</p>
-<p>还要deny from all在整个文件中找到并注释它。<br>
-保存并关闭文件。Restart Apache httpd server：</p>
-<h1 id="service-httpd-restart">service httpd restart</h1>
-<p>编辑：由于这是选定的答案，并获得最佳可见性...请还请确保已安装PHP，否则会出现相同的Forbidden错误。</p>
+            <p>🤣闲话：想起来one credit自己举办了一个Game Jam，无奈用着G645的古老电脑啥也干不了，而且自己还没有真正做完过一个哪怕小游戏，所以就有了想法试着做一个——下面这样的游戏<br>
+<img src="https://aresfor.github.io/post-images/1612712917831.png" alt="" loading="lazy"><br>
+好了，好久没有打开unity和敲c#🤡</p>
+<p>做了第一个基本的游戏原型，因为本来游戏就很简单，接下来就是精灵的问题，打算用冒险岛的素材，没弄过2D的东西，精灵图集是作为一次绘制节省性能而存在的我竟然不知道一开始还在扣😂，去看了下手册明天再开始弄，电脑太卡了打开网页和等待代码加载都要花好久的时间，感叹win10内存管理的强大，不至于让软件崩溃😒，还有本来用vscode编辑的快乐伴随奇怪的错误而停止了，现在只能用vs了（打开太慢了🤚）<br>
+<img src="https://aresfor.github.io/post-images/1612713355663.png" alt="" loading="lazy"></p>
 
           </div>
         </div>
 
         
+          <div class="next-post">
+            <a class="purple-link" href="https://aresfor.github.io/post/blender-bei-wang-kuai-jie-jian/">
+              <h3 class="post-title">
+                下一篇：Blender备忘快捷键
+              </h3>
+            </a>
+          </div>
+          
       </div>
 
       

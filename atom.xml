@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://aresfor.github.io</id>
     <title>ロキシー</title>
-    <updated>2021-02-05T13:32:53.561Z</updated>
+    <updated>2021-02-07T15:56:34.041Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://aresfor.github.io"/>
     <link rel="self" href="https://aresfor.github.io/atom.xml"/>
@@ -10,6 +10,19 @@
     <logo>https://aresfor.github.io/images/avatar.png</logo>
     <icon>https://aresfor.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, ロキシー</rights>
+    <entry>
+        <title type="html"><![CDATA[one key game开发日志01]]></title>
+        <id>https://aresfor.github.io/post/one-key-game-kai-fa-ri-zhi-01/</id>
+        <link href="https://aresfor.github.io/post/one-key-game-kai-fa-ri-zhi-01/">
+        </link>
+        <updated>2021-02-07T15:45:57.000Z</updated>
+        <content type="html"><![CDATA[<p>🤣闲话：想起来one credit自己举办了一个Game Jam，无奈用着G645的古老电脑啥也干不了，而且自己还没有真正做完过一个哪怕小游戏，所以就有了想法试着做一个——下面这样的游戏<br>
+<img src="https://aresfor.github.io/post-images/1612712917831.png" alt="" loading="lazy"><br>
+好了，好久没有打开unity和敲c#🤡</p>
+<p>做了第一个基本的游戏原型，因为本来游戏就很简单，接下来就是精灵的问题，打算用冒险岛的素材，没弄过2D的东西，精灵图集是作为一次绘制节省性能而存在的我竟然不知道一开始还在扣😂，去看了下手册明天再开始弄，电脑太卡了打开网页和等待代码加载都要花好久的时间，感叹win10内存管理的强大，不至于让软件崩溃😒，还有本来用vscode编辑的快乐伴随奇怪的错误而停止了，现在只能用vs了（打开太慢了🤚）<br>
+<img src="https://aresfor.github.io/post-images/1612713355663.png" alt="" loading="lazy"></p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Blender备忘快捷键]]></title>
         <id>https://aresfor.github.io/post/blender-bei-wang-kuai-jie-jian/</id>

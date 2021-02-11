@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://aresfor.github.io</id>
     <title>ロキシー</title>
-    <updated>2021-02-11T17:37:00.214Z</updated>
+    <updated>2021-02-11T17:45:52.164Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://aresfor.github.io"/>
     <link rel="self" href="https://aresfor.github.io/atom.xml"/>
@@ -10,6 +10,19 @@
     <logo>https://aresfor.github.io/images/avatar.png</logo>
     <icon>https://aresfor.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, ロキシー</rights>
+    <entry>
+        <title type="html"><![CDATA[one key game开发日志03]]></title>
+        <id>https://aresfor.github.io/post/one-key-game-kai-fa-ri-zhi-03/</id>
+        <link href="https://aresfor.github.io/post/one-key-game-kai-fa-ri-zhi-03/">
+        </link>
+        <updated>2021-02-11T17:37:08.000Z</updated>
+        <content type="html"><![CDATA[<p>已经凌晨一点了把昨儿做的一点总结一下叭</p>
+<p>想做一个BOSS进来，打算用Timeline加入过场，但是用着浑身不对劲，就先讲究做了一个普通的BOSS进场和PC的位移，用的还是小时候冒险岛最怕的蝙蝠魔🙃，然后在脚本里调用playable director的API来完成禁用用户控制脚本等操作。</p>
+<p>因为普通和BOSS情况下我想设置成两种不同的操作模式，但是还没想好要BOSS情况下的操作，就想着抽象一下，差不多了，明天就可以做好，还可以加入音效了，该用上学了的&quot;打碟技术&quot;了🤡</p>
+<p>还有点问题，1️⃣不同的Timeline不知道能不能混合，️2️⃣Timeline和Animation关于位置的问题我还没涉及到3️⃣像大表哥2一样无缝进入动画，也就是不偏移当前位置来进行位移动画怎么样实现。<br>
+emmm大概就是这样吧，今天玩了就先不上图了，补在明天的日志里❤️</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[2021新年快乐]]></title>
         <id>https://aresfor.github.io/post/2021-xin-nian-kuai-le/</id>

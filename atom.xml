@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://aresfor.github.io</id>
     <title>ロキシー</title>
-    <updated>2021-02-11T17:47:47.498Z</updated>
+    <updated>2021-02-12T15:53:12.262Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://aresfor.github.io"/>
     <link rel="self" href="https://aresfor.github.io/atom.xml"/>
@@ -10,6 +10,22 @@
     <logo>https://aresfor.github.io/images/avatar.png</logo>
     <icon>https://aresfor.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, ロキシー</rights>
+    <entry>
+        <title type="html"><![CDATA[one key game开发日志04]]></title>
+        <id>https://aresfor.github.io/post/one-key-game-kai-fa-ri-zhi-04/</id>
+        <link href="https://aresfor.github.io/post/one-key-game-kai-fa-ri-zhi-04/">
+        </link>
+        <updated>2021-02-12T15:43:14.000Z</updated>
+        <content type="html"><![CDATA[<p>🤡🤡🤡🤡🤡今天真的累坏了，下午就开始想着怎么弄，Boss战斗就姑且先简单一点，撞击Boss的发射物打击Boss，否则自己扣分数<br>
+<img src="https://aresfor.github.io/post-images/1613144699877.png" alt="" loading="lazy"><br>
+还加入了开始菜单和暂停菜单，暂停菜单还可以控制音乐，现在就加了一首JPOP当背景音乐，音效还没有添加<br>
+<img src="https://aresfor.github.io/post-images/1613144773328.png" alt="" loading="lazy"><br>
+<img src="https://aresfor.github.io/post-images/1613144776834.png" alt="" loading="lazy"><br>
+哦对了🤣，像以前神庙逃亡那样的合上然后加载场景的过渡，本来想异步加载，这样需要一个中间场景没必要，就用了Timeline等蕉蕉动画播放完了再唤醒一个物体(这个物体挂着Awake就重新加载场景的脚本)，暂且实现。然后啊然后！最晕的是游戏速度一快，死了之后就会卡在蕉蕉那里，我也不知道为什么，后来Debug了一会才发现根本原因！是Time.timescale会影响Timeline播放，emm，这坑真的不踩不知道🤡</p>
+<p>原型制作差不多就是这样，7号开始中间摸鱼了几天，现在做好了原型，感觉还是学到了一些东西，接下来得让朋友vanvan，今天蛋蛋玩了一会就感觉非常无聊，确实是这样的🤣，我自己玩自己的游戏就像看自己剪的视频一样，虽然很烂但还是津津有味，明天一定要按游戏设计的原理来好好分析下自己的游戏需要什么，缺少什么<br>
+<img src="https://aresfor.github.io/post-images/1613145149504.png" alt="" loading="lazy"></p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[one key game开发日志03]]></title>
         <id>https://aresfor.github.io/post/one-key-game-kai-fa-ri-zhi-03/</id>

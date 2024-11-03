@@ -232,18 +232,3 @@ jekyll-archives:
   permalinks:
     tag: /tags/:name/
     category: /categories/:name/
-
-plugins:
-  - jekyll-notion
-
-
-collections:
-  - recipes
-  - films
-
-
-notion:
-  databases:
-    - id: 1332699ffab680ad9cefe3df3dd89e4f
-      collection: recipes
-

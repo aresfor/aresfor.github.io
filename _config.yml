@@ -9,7 +9,7 @@ theme: jekyll-theme-chirpy
 lang: zh-CN
 
 # Change to your timezone › https://kevinnovak.github.io/Time-Zone-Picker
-timezone:Asia/Shanghai
+timezone: Asia/Shanghai
 
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
@@ -17,10 +17,10 @@ timezone:Asia/Shanghai
 title: 点点滴滴 
 # the main title
 
-tagline:明溪的个人博客
+tagline: 明溪的个人博客
  # it will display as the subtitle
 
-description: >-明溪的个人博客描述 
+description: 明溪的个人博客描述 
 # used by seo meta and the atom feed
  # A minimal, responsive and feature-rich Jekyll theme for technical writing.
 
@@ -29,7 +29,7 @@ description: >-明溪的个人博客描述
 url: "https://aresfor.github.io"
 
 github:
-  username: AZzusa
+  username: aresfor
  # change to your GitHub username
 
 twitter:
@@ -126,12 +126,12 @@ comments:
   # Giscus options › https://giscus.app
   giscus:
     repo: aresfor/aresfor.github.io
-	# <gh-username>/<repo>
-    repo_id:R_kgDONJwgaA
-    category:PostComments
-    category_id:DIC_kwDONJwgaM4Cj8A8
+# <gh-username>/<repo>
+    repo_id: R_kgDONJwgaA
+    category: PostComments
+    category_id: DIC_kwDONJwgaM4Cj8A8
     mapping: pathname
-	# optional, default to 'pathname'
+# optional, default to 'pathname'
     strict: # optional, default to '0'
     input_position: # optional, default to 'bottom'
     lang: # optional, default to the value of `site.lang`

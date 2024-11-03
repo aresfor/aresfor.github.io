@@ -119,11 +119,11 @@ comments:
     issue_term: # < url | pathname | title | ...>
   # Giscus options › https://giscus.app
   giscus:
-    repo: # <gh-username>/<repo>
-    repo_id:
-    category:
-    category_id:
-    mapping: # optional, default to 'pathname'
+    repo: aresfor/aresfor.github.io# <gh-username>/<repo>
+    repo_id:R_kgDONJwgaA
+    category:PostComments
+    category_id:DIC_kwDONJwgaM4Cj8A8
+    mapping: pathname# optional, default to 'pathname'
     strict: # optional, default to '0'
     input_position: # optional, default to 'bottom'
     lang: # optional, default to the value of `site.lang`

@@ -44,6 +44,17 @@ jobs:
         with:
           ruby-version: 3.3
           bundler-cache: true
+          
+      - name: Check NOTION_TOKEN
+        run: |
+          if [ -z "$NOTION_TOKEN" ]; then
+            echo "NOTION_TOKEN is empty or undefined."
+          else
+            echo "NOTION_TOKEN is set."
+          fi
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+
 
       - name: Build site
         run: bundle exec jekyll b -d "_site${{ steps.pages.outputs.base_path }}"

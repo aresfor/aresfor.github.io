@@ -1,5 +1,8 @@
 name: "Build and Deploy"
 on:
+  schedule:
+    # 每天早晚五点半触发
+    - cron:  '30 5,17 * * *'
   push:
     branches:
       - main

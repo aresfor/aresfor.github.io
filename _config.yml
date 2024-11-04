@@ -1,3 +1,14 @@
+plugins:
+  - jekyll-notion
+
+
+notion:
+  cache: false
+  databases:
+    - id: 1332699ffab6805eaf88d7c9d96cdcd8
+      collection: posts
+
+
 # The Site Configuration
 
 # Import the theme
@@ -14,13 +25,13 @@ timezone: Asia/Shanghai
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: 点点滴滴 
+title: 明溪
 # the main title
 
-tagline: 明溪的个人博客
+tagline: 分享游戏开发和有趣的技术文章
  # it will display as the subtitle
 
-description: 明溪的个人博客描述 
+description: 这是明溪的个人博客网站
 # used by seo meta and the atom feed
  # A minimal, responsive and feature-rich Jekyll theme for technical writing.
 
@@ -39,12 +50,12 @@ twitter:
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
-  name: your_full_name
-  email: example@domain.com # change to your email address
+  name: MingXi
+  email: 734242792@qq.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://twitter.com/username # change to your Twitter homepage
-    - https://github.com/username # change to your GitHub homepage
+    #- https://twitter.com/username # change to your Twitter homepage
+    - https://github.com/aresfor # change to your GitHub homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
     # - https://www.linkedin.com/in/username
@@ -232,3 +243,5 @@ jekyll-archives:
   permalinks:
     tag: /tags/:name/
     category: /categories/:name/
+
+

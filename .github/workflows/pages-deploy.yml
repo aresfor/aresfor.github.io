@@ -70,6 +70,7 @@ jobs:
         env:
           JEKYLL_ENV: "production"
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          
       - name: Commit and Push Changes
         env:
           BOT_NAME: ${{ secrets.BOT_NAME }}
@@ -82,7 +83,7 @@ jobs:
           git config user.email "$BOT_EMAIL"
           git add .
           git commit -m "Notion sync $(date +'%Y-%m-%d')"
-          git push "https://${TOKEN_NAME}:${ACCESS_TOKEN}@github.com/<username>/<repository>.git" HEAD:${{ github.ref }}
+          git push "https://${TOKEN_NAME}:${ACCESS_TOKEN}@github.com/aresfor/aresfor.github.io.git" HEAD:${{ github.ref }}
           fi
 
           

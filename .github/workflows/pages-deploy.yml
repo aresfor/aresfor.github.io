@@ -1,7 +1,7 @@
 name: "Build and Deploy"
 on:
   schedule:
-    # 每天早晚五点半触发
+    # 每天早晚5+0800点半触发，也就是CN时间13.30和凌晨1.30触发
     - cron:  '30 5,17 * * *'
   push:
     branches:

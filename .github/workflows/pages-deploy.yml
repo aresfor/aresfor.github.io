@@ -59,12 +59,27 @@ jobs:
         env:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
 
-      #- name: Notion Sync
-      #  env:
-      #    NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
-      #  run: bundle exec jekyll fetch_notion
+      - name: Notion Sync
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+        run: bundle exec jekyll fetch_notion
 
-      
+       - name: Commit and Push Changes
+        env:
+          BOT_NAME: ${{ secrets.BOT_NAME }}
+          BOT_EMAIL: ${{ secrets.BOT_EMAIL }}
+          TOKEN_NAME: ${{ secrets.TOKEN_NAME }}
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        run: |
+          if [[ $(git status --porcelain) ]]; then
+          git config user.name "$BOT_NAME"
+          git config user.email "$BOT_EMAIL"
+          git add .
+          git commit -m "Notion sync $(date +'%Y-%m-%d')"
+          #git push "https://${TOKEN_NAME}:${ACCESS_TOKEN}@github.com/aresfor/aresfor.github.io.git" HEAD:${{ github.ref }}
+           git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/aresfor/aresfor.github.io.git HEAD:${{ github.ref }}
+          fi
+          
 
       - name: Build site
         run: bundle exec jekyll b -d "_site${{ steps.pages.outputs.base_path }}"
@@ -83,33 +98,7 @@ jobs:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
 
           
-      - name: Commit and Push Changes
-        env:
-          BOT_NAME: ${{ secrets.BOT_NAME }}
-          BOT_EMAIL: ${{ secrets.BOT_EMAIL }}
-          TOKEN_NAME: ${{ secrets.TOKEN_NAME }}
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        run: |
-          if [[ $(git status --porcelain) ]]; then
-          git config user.name "$BOT_NAME"
-          git config user.email "$BOT_EMAIL"
-          git add .
-          git commit -m "Notion sync $(date +'%Y-%m-%d')"
-          #git push "https://${TOKEN_NAME}:${ACCESS_TOKEN}@github.com/aresfor/aresfor.github.io.git" HEAD:${{ github.ref }}
-           git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/aresfor/aresfor.github.io.git HEAD:${{ github.ref }}
-          fi
-          
-      - name: Sleep for 5 seconds to wait for push completion
-        run: sleep 5    
-
-        
-      - name: Pull Latest Changes
-        run: |
-          git fetch origin
-          git reset --hard origin/${{ github.ref_name }}
-          git pull origin ${{ github.ref }}  # 拉取最新的更改
-          
-      
+     
   
       - name: Test site
         run: |

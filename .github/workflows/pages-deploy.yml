@@ -114,6 +114,10 @@ jobs:
         with:
           path: "_site${{ steps.pages.outputs.base_path }}"
           
+  test:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
        
   deploy:
     environment:

@@ -1,8 +1,9 @@
 name: "Build and Deploy"
 on:
+  workflow_dispatch:
   schedule:
-    # 每天早晚5+0800点半触发，也就是CN时间13.30和凌晨1.30触发
-    - cron:  '30 5,17 * * *'
+    # CN时间13.30,下午16.30和凌晨1.30触发
+    - cron:  '30 5,8,17 * * *'
   push:
     branches:
       - main
@@ -58,12 +59,35 @@ jobs:
         env:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
 
+      #- name: Notion Sync
+      #  env:
+      #    NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+      #  run: bundle exec jekyll fetch_notion
+
+      
 
       - name: Build site
         run: bundle exec jekyll b -d "_site${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: "production"
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+
+          - name: Commit and Push Changes
+        env:
+          BOT_NAME: ${{ secrets.BOT_NAME }}
+          BOT_EMAIL: ${{ secrets.BOT_EMAIL }}
+          TOKEN_NAME: ${{ secrets.TOKEN_NAME }}
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        run: |
+          if [[ $(git status --porcelain) ]]; then
+            git config user.name "$BOT_NAME"
+            git config user.email "$BOT_EMAIL"
+            git add .
+            git commit -m "Notion sync $(date +'%Y-%m-%d')"
+            git push "https://${TOKEN_NAME}:${ACCESS_TOKEN}@github.com/<username>/<repository>.git" HEAD:${{ github.ref }}
+          fi
+
+          
       - name: Test site
         run: |
           bundle exec htmlproofer _site \

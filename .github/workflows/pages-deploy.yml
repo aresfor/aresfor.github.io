@@ -64,6 +64,9 @@ jobs:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
         run: bundle exec jekyll fetch_notion
 
+      - name: Pull Latest Changes
+        run: git pull --rebase origin main
+  
       - name: Commit and Push Changes
         env:
           BOT_NAME: ${{ secrets.BOT_NAME }}

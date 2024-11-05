@@ -6,7 +6,7 @@ notion:
   # disables the sync at build stage
   # makes `jekyll prefetch` command available
   fetch_mode: true
-  # cache: false
+  cache: false
   filter: { "property": "Published", "checkbox": { "equals": "true" } }
   sorts: [{ "timestamp": "created_time", "direction": "ascending" }]
   databases:

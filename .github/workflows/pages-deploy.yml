@@ -70,6 +70,17 @@ jobs:
         env:
           JEKYLL_ENV: "production"
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+
+      - name: Check Access Token
+        run: |
+          if [ -z "$ACCESS_TOKEN" ]; then
+            echo "ACCESS_TOKEN is empty or undefined."
+          else
+            echo "ACCESS_TOKEN is set."
+          fi
+        env:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+
           
       - name: Commit and Push Changes
         env:

@@ -13,3 +13,15 @@ end
 
 # gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
 gem 'jekyll-notion'
+
+# Fetching files easily
+#gem 'open-uri'
+
+# if you are going to use responsive images plugin
+group :jekyll_plugins do
+  # ...
+
+  # github.com/rbuchberger/jekyll_picture_tag
+  #gem 'jekyll_picture_tag', '2.0.4'
+gem 'jekyll-fetch-notion'
+end

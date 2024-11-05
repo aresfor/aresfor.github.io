@@ -75,7 +75,7 @@ jobs:
           git add .
           git pull origin ${{ github.ref }}  # 拉取最新内容
           git commit -m "Auto-commit changes before pulling latest changes"
-          
+          fi
   
       - name: Commit and Push Changes
         env:

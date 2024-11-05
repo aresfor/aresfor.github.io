@@ -17,7 +17,7 @@ on:
 
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -96,7 +96,7 @@ jobs:
           git add .
           git commit -m "Notion sync $(date +'%Y-%m-%d')"
           #git push "https://${TOKEN_NAME}:${ACCESS_TOKEN}@github.com/aresfor/aresfor.github.io.git" HEAD:${{ github.ref }}
-           git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/<username>/<repository>.git HEAD:${{ github.ref }}
+           git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/aresfor/aresfor.github.io.git HEAD:${{ github.ref }}
           fi
 
           

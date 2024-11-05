@@ -99,14 +99,17 @@ jobs:
            git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/aresfor/aresfor.github.io.git HEAD:${{ github.ref }}
           fi
           
+      - name: Sleep for 5 seconds to wait for push completion
+        run: sleep 5    
+
+        
       - name: Pull Latest Changes
         run: |
           git fetch origin
           git reset --hard origin/${{ github.ref_name }}
           git pull origin ${{ github.ref }}  # 拉取最新的更改
           
-     - name: Sleep for 5 seconds to wait for push completion
-  run: sleep 5
+      
   
       - name: Test site
         run: |

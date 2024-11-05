@@ -1,5 +1,6 @@
 name: "Build and Deploy"
 on:
+  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
   schedule:
     # CN时间13.30,下午16.30和凌晨1.30触发
@@ -13,8 +14,6 @@ on:
       - README.md
       - LICENSE
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
 
 permissions:
   contents: read
@@ -72,19 +71,19 @@ jobs:
           JEKYLL_ENV: "production"
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
       - name: Commit and Push Changes
-env:
-BOT_NAME: ${{ secrets.BOT_NAME }}
-BOT_EMAIL: ${{ secrets.BOT_EMAIL }}
-TOKEN_NAME: ${{ secrets.TOKEN_NAME }}
-ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-run: |
-if [[ $(git status --porcelain) ]]; then
-git config user.name "$BOT_NAME"
-git config user.email "$BOT_EMAIL"
-git add .
-git commit -m "Notion sync $(date +'%Y-%m-%d')"
-git push "https://${TOKEN_NAME}:${ACCESS_TOKEN}@github.com/<username>/<repository>.git" HEAD:${{ github.ref }}
-fi
+        env:
+          BOT_NAME: ${{ secrets.BOT_NAME }}
+          BOT_EMAIL: ${{ secrets.BOT_EMAIL }}
+          TOKEN_NAME: ${{ secrets.TOKEN_NAME }}
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        run: |
+          if [[ $(git status --porcelain) ]]; then
+          git config user.name "$BOT_NAME"
+          git config user.email "$BOT_EMAIL"
+          git add .
+          git commit -m "Notion sync $(date +'%Y-%m-%d')"
+          git push "https://${TOKEN_NAME}:${ACCESS_TOKEN}@github.com/<username>/<repository>.git" HEAD:${{ github.ref }}
+          fi
 
           
       - name: Test site

@@ -118,7 +118,11 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
-       
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
   deploy:
     environment:
       name: github-pages

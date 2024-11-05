@@ -64,7 +64,7 @@ jobs:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
         run: bundle exec jekyll fetch_notion
 
-       - name: Commit and Push Changes
+      - name: Commit and Push Changes
         env:
           BOT_NAME: ${{ secrets.BOT_NAME }}
           BOT_EMAIL: ${{ secrets.BOT_EMAIL }}

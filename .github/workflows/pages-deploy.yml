@@ -65,7 +65,13 @@ jobs:
         run: bundle exec jekyll fetch_notion
 
       - name: Pull Latest Changes
+        env:
+          BOT_NAME: ${{ secrets.BOT_NAME }}
+          BOT_EMAIL: ${{ secrets.BOT_EMAIL }}
         run: |
+          if [[ $(git status --porcelain) ]]; then
+          git config user.name "$BOT_NAME"
+          git config user.email "$BOT_EMAIL"
           git add .
           git pull origin ${{ github.ref }}  # 拉取最新内容
           git commit -m "Auto-commit changes before pulling latest changes"
